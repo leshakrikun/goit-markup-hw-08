@@ -1,0 +1,124 @@
+.social-block {
+  margin-left: 32px;
+  margin-right: 25px;
+}
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--third-background-color);
+  color: var(--link-color);
+  background-position: center;
+  margin-right: 6px;
+  transition: color $transition,
+    background-color $transition;
+}
+.social-link:last-child {
+  margin-right: 0;
+}
+.social-link:hover,
+.social-link:focus {
+  color: var(--third-background-color);
+  background-color: var(--accent-color);
+}
+.icon-social {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+footer .icon {
+  color: var(--third-background-color);
+}
+footer {
+  background-color: var(--secondary-background-color);
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+footer .container {
+  display: flex;
+}
+footer .social-block {
+  margin-top: 12px;
+  margin-left: 38px;
+}
+footer .social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--third-background-color);
+}
+footer .social-link:hover,
+footer .social-link:focus {
+  color: var(--third-background-color);
+  background-color: var(--accent-color);
+}
+.send-block {
+  margin-top: 12px;
+  margin-left: 93px;
+}
+.send-mail {
+  display: flex;
+}
+.input {
+   @include FontType(16px, 400, 1.25, 0.03em);
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 358px;
+  margin-right: 12px;
+  padding-left: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: left;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.subscribe {
+  @include FontType(16px, 700, 1.88, 0.06em);
+  background-color: var(--accent-color);
+  color: var(--team-color);  
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 10px 28px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+    &:after {
+  background-image: url(../img/svg/task_6/optimized/send.svg);
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-color: inherit;
+  background-repeat: no-repeat;
+    }
+}
+.footer-block {
+  width: 231px;
+}
+.join {
+  @include FontType(14px, 700, 1.14, 0.03em);
+  color: var(--third-background-color);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.address {
+  @include FontType(14px, 400, 1.7, 0.03em);
+  font-style: normal;
+  display: block;
+  color: var(--third-background-color);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.footer-contacts {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 12px;
+  margin-bottom: 0;
+}

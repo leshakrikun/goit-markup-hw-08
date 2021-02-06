@@ -1,0 +1,32 @@
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+    to right,
+    rgba(47,48,58,0.4),
+    rgba(47,48,58,0.4)),
+    url('../img/Optymized/hero.jpg');
+    background-position: center;
+}
+.title-hero {
+    @include FontType(44px, 900, 1.36, 0.06em);
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 30px;
+    color: var(--third-background-color);  
+}
+.button {
+    display: block;
+    background-color: var(--accent-color);
+    @include FontType(16px, 700, 1.9, 0.06em);
+    text-align: center;
+    color: var(--third-background-color);
+    margin:0 auto;
+    padding: 10px 32px;
+    border: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+}
