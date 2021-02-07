@@ -9,9 +9,17 @@
 <body>
     <header>
         <div class="container header">
-            <a href="./index.html" class="icon">
-                <span class="logo">Web</span>Studio</a>
-            <nav>
+            
+                <a href="./index.html" class="icon">
+                    <span class="logo">Web</span>Studio</a>
+                <button type="button" class="menu-button" data-menu-button aria-expanded="false">
+                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                        <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu"></use>
+                        <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_40"></use>
+                    </svg>
+                </button>
+            
+                <nav>
                 <ul class="nav">
                     <li><a class="nav-link current" href="./index.html">Студия</a></li>
                     <li><a class="nav-link" href="./portfolio.html">Портфолио</a></li>
@@ -32,16 +40,11 @@
                         +38 096 111 11 11</a>
                 </li>
             </ul>
-            <button type="button" class="menu-button" data-menu-button aria-expanded="false">
-                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                    <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu"></use>
-                    <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_40"></use>
-                </svg>
-            </button>
+           
 
 
 
-            <div class="menu-container" data-menu>
+            <div class="menu-container container" data-menu>
                 <ul class="mobile-nav">
                     <li><a class="mobile-nav__link current" href="./index.html">Студия</a></li>
                     <li><a class="mobile-nav__link" href="./portfolio.html">Портфолио</a></li>
@@ -56,10 +59,10 @@
                     </li>
                 </ul>
                 <ul class="menu-social">
-                    <li><a class="menu-social__link" href="">Instagram</a></li>
-                    <li><a class="menu-social__link" href="">Twitter</a></li>
-                    <li><a class="menu-social__link" href="">Facebook</a></li>
-                    <li><a class="menu-social__link" href="">LinkedIn</a></li>
+                    <li class="menu-social__link"><a href="">Instagram</a></li>
+                    <li class="menu-social__link"><a href="">Twitter</a></li>
+                    <li class="menu-social__link"><a href="">Facebook</a></li>
+                    <li class="menu-social__link"><a href="">LinkedIn</a></li>
                 </ul>
             </div>
 
@@ -101,15 +104,15 @@
                 <h2 class="section-title">Чем мы занимаемся</h2>
                 <ul class="list-work">
                     <li class="list-work-item">
-                        <img class="work" src="./img/Optymized/box-1.jpg" alt="Человек пишет программу на планшете" width="370"/>
+                        <img class="work" src="./img/Optymized/box-1.jpg" alt="Человек пишет программу на планшете"/> <!-- width="370" -->
                         <p class="work-type">Десктопные приложения</p>
                     </li>
                     <li class="list-work-item">
-                        <img class="work" src="./img/Optymized/box-2.jpg" alt="Работа с телефоном и планшетом" width="370"/>
+                        <img class="work" src="./img/Optymized/box-2.jpg" alt="Работа с телефоном и планшетом"/> <!-- width="370" -->
                         <p class="work-type">Мобильные приложения</p>
                     </li>
                     <li class="list-work-item">
-                        <img class="work" src="./img/Optymized/box-3.jpg" alt="Человек выбирает нужный цвет на планшете" width="370"/>
+                        <img class="work" src="./img/Optymized/box-3.jpg" alt="Человек выбирает нужный цвет на планшете"/> <!-- width="370" -->
                         <p class="work-type">Дизайнерские решения</p>
                     </li>
                 </ul>

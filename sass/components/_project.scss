@@ -3,32 +3,67 @@ body {
   color: var(--primary-text-color);
   font-family: $basic-font;
 }
+.our-advantages{
+  @media screen and (max-width: 767px) {
+      margin-top: 60px;
+  } 
+}
 .list-advantages {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (max-width: 767px) {
+      & h3 .head-advantages {
+        align-items: center;
+        margin-top: 30px;
+      } 
+
+ @media screen and (min-width: 480px) {
+    /* width: 480px; */
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    /* width: 1200px; */
+    display: flex;
+    justify-content: space-between;
+    }
+  }
 }
 .desc-advantages {
   padding-bottom: 0;
+  justify-content: center;
+
+  align-items: center;
+  align-content: center
+ 
 }
 .advantages {
   @include FontType(14px, 400, 1.7, 0.03em);
-  width: 270px;
-  margin: 0;
+  
+  @media screen and (min-width: 480px) {
+    width: calc(100%/1);
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100%/2);
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    /* width: 1200px; */
+    width: calc(100%/4);
+   /*  width: 270px; */
+    margin: 0;
+  }
 }
 .head-advantages {
   @include FontType(14px, 700, 1.14, 0.03em);
   color: var(--secondary-text-color);
   text-transform: uppercase;
   margin-bottom: 10px;
-}
-.our-advantages {
-  padding-bottom: 94px;
-  padding-top: 94px;
-}
-.our-work {
-  display: block;
   padding-bottom: 94px;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+        margin-top: 30px;
 }
 .section-title {
   @include FontType(36px, 700, 1.17, 0.03em);
@@ -69,8 +104,17 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
 }
 .list-work {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+  }
 }
 .list-work > li {
   margin-right: 27px;
@@ -112,6 +156,8 @@ body {
 .antenna::before {
   background-image: url(../img/optymizes_svg/antenna.svg);
   @extend %icon-advantages;
+  width: 100%;
+ 
 }
 .clock::before {
   background-image: url(../img/optymizes_svg/clock.svg);
