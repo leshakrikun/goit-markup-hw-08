@@ -24,13 +24,19 @@ $logo-font: Raleway, sans-serif;
   display: block;
   content: '';
   contain: content;
-  max-width: 270px;
+
+  width: 70px;
+  height: 70px;
+
+  /* max-width: 270px;
+  height: 120px; */
+
 
   margin-left: auto;
   margin-right: auto;
 
-  height: 120px;
-  /* margin-bottom: 55px; */
+  
+  margin-bottom: 55px;
   background-color: var(--team-color);
   background-position: 50% 50%;
   background-repeat: no-repeat;

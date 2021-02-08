@@ -10,14 +10,13 @@ body {
 }
 .list-advantages {
   @media screen and (max-width: 767px) {
-      & h3 .head-advantages {
-        align-items: center;
-        margin-top: 30px;
+      & h3.head-advantages {
+        /* display: block; */
+        text-align: center;
+        /* margin-top: 30px; */
       } 
+    }
 
- @media screen and (min-width: 480px) {
-    /* width: 480px; */
-  }
   @media screen and (min-width: 768px) {
     width: 768px;
     display: flex;
@@ -27,7 +26,6 @@ body {
     display: flex;
     justify-content: space-between;
     }
-  }
 }
 .desc-advantages {
   padding-bottom: 0;
@@ -42,6 +40,7 @@ body {
   
   @media screen and (min-width: 480px) {
     width: calc(100%/1);
+    margin-bottom: 55px;
   }
   @media screen and (min-width: 768px) {
     flex-basis: calc(100%/2);
@@ -59,13 +58,21 @@ body {
   color: var(--secondary-text-color);
   text-transform: uppercase;
   margin-bottom: 10px;
-  padding-bottom: 94px;
+  /* padding-bottom: 94px; */ 
   justify-content: center;
   align-content: center;
   align-items: center;
-        margin-top: 30px;
+        /* margin-top: 30px; */
 }
-.section-title {
+
+  .our-work {
+  @media screen and (max-width: 767px) {
+    display: none;
+    }
+  }
+
+  .section-title {
+
   @include FontType(36px, 700, 1.17, 0.03em);
   color: var(--secondary-text-color);
   text-align: center;
@@ -75,6 +82,13 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--team-color);
+
+
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+
 }
 .section-team {
   @include FontType(36px, 700, 1.7, 0.03em);
@@ -84,6 +98,13 @@ body {
 }
 .work {
   display: block;
+    @media screen and (max-width: 1200px) {
+      width: 270px;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      max-width: 450px;
+    }
 }
 .list-work-item {
   position: relative;
@@ -123,11 +144,15 @@ body {
   margin-right: 0;
 }
 .all-team {
+  @media screen and (min-width: 768px){
   display: flex;
   margin: auto;
+  }
 }
 .all-team > li {
+  @media screen and (min-width: 768px){
   margin-right: 30px;
+}
 }
 .team-memeber {
   background-color: var(--third-background-color);
@@ -156,7 +181,7 @@ body {
 .antenna::before {
   background-image: url(../img/optymizes_svg/antenna.svg);
   @extend %icon-advantages;
-  width: 100%;
+  /* width: 100%; */
  
 }
 .clock::before {
@@ -171,18 +196,35 @@ body {
   background-image: url(../img/optymizes_svg/diagram.svg);
   @extend %icon-advantages;
 }
+.social-block {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 main {
   background-color: var(--third-background-color);
 }
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }  
 }
 .our-clients {
   @include FontType(36px, 700, 1.17, 0.03em);
   color: var(--secondary-text-color);
   text-align: center;
   padding-bottom: 50px;
+
+  @media screen and (max-width: 767px) {
+    @include FontType(28px, 700, 1.14, 0.03em);
+  }
 }
 .icon-clients {
   display: inline-flex;
@@ -214,6 +256,12 @@ main {
 }
 .square {
   display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100%/2 - 30px);
+
+
+
+
   justify-content: space-between;
 }
 .icon-square {
@@ -229,6 +277,10 @@ main {
   transition: color $transition,
     border $transition;
 
+      @media screen and (max-width: 767px) {
+        width: 210px;
+        margin-bottom: 30px;
+      }  
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -342,4 +394,16 @@ button {
   text-align: left;
   margin: 0;
   color: var(--primary-text-color);
+}
+.social-block {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+
+
+  @media screen and (min-width: 768px) {
+  margin-left: 32px;
+  margin-right: 25px;
+  }
 }
