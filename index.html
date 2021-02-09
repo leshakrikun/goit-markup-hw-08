@@ -9,15 +9,15 @@
 <body>
     <header>
         <div class="container header">
-                <a href="./index.html" class="icon">
-                        <span class="logo">Web</span>Studio</a>
-                <button type="button" class="menu-button" data-menu-button aria-expanded="false">
-                    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                        <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu"></use>
-                        <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_40"></use>
-                    </svg>
-                </button>
-            </div>
+            <a href="./index.html" class="icon">
+                    <span class="logo">Web</span>Studio</a>
+            <button type="button" class="menu-button" data-menu-button aria-expanded="false">
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu"></use>
+                    <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_40"></use>
+                </svg>
+            </button>
+        
             <nav>
                 <ul class="nav">
                     <li><a class="nav-link current" href="./index.html">Студия</a></li>
@@ -39,6 +39,7 @@
                     +38 096 111 11 11</a>
                 </li>
             </ul>
+        </div>    
             <div class="menu-container" data-menu>
                 <ul class="mobile-nav">
                     <li><a class="mobile-nav__link current" href="./index.html">Студия</a></li>
@@ -49,7 +50,7 @@
                     <li><a class="mobile-contact" href="tel:+380961111111">
                             +38 096 111 11 11</a>
                     </li>
-                    <li><a class="mobile-contact" href="mailto:info@devstudio.com">
+                    <li><a class="mobile-mail-contact" href="mailto:info@devstudio.com">
                             info@devstudio.com</a>
                     </li>
                 </ul>
@@ -365,23 +366,6 @@
             <button type="submit" class="send-submit">Отправить</button>
         </div>
     </div>
-
-<!-- <script>
-    const setup = name => {
-        const backdrop = document.querySelector(`[data-backdrop-${name}]`);
-        const buttons = document.querySelectorAll(`[data-toggle-backdrop-${name}]`);
-        const toggleBackdrop = () =>
-            backdrop.classList.toggle('backdrop--hidden');
-        buttons.forEach(button =>
-            button.addEventListener('click', toggleBackdrop),
-        );
-    }
-    setup('schedule')
-    setup('menu')
-</script> -->
-
-
-
 
 
     <script src="./js/menu.js"></script>

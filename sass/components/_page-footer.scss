@@ -29,8 +29,6 @@
 }
 footer .icon {
   color: var(--third-background-color);
-  /* display: block; */
-  /* text-align: center; */
   justify-content: center;
 }
 footer {
@@ -79,7 +77,7 @@ footer .social-link:focus {
    }
 }
 .send-mail {
-  /* display: flex; */
+  
   @media screen and (max-width: 767px) {
     display: block;
    
@@ -152,7 +150,6 @@ footer .social-link:focus {
 .address {
   @include FontType(14px, 400, 1.7, 0.03em);
   font-style: normal;
-  /* display: block; */
   color: var(--third-background-color);
   margin-top: 20px;
   margin-bottom: 0;

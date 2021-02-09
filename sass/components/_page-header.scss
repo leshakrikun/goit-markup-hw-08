@@ -4,13 +4,14 @@ header {
   background-color: var(--third-background-color);
   display: flex;
   justify-content: space-between;
-  
+  max-width: 1200px;
 }
 nav {
   display: flex;
 }
 .nav {
   display: flex;
+  
   align-items: center;
     @media screen and (max-width: 767px) {
       display: none;
@@ -31,8 +32,8 @@ nav {
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;
-    /* min-width: 1200px; */
   }
+ 
 }
 
 .logo {
@@ -47,19 +48,27 @@ nav {
   align-items: center;
 
   @media screen and (min-width: 1200px) {
-    /* width: 1200px; */
-    /* min-width: 1200px; */
+    
     @include FontType(26px, 700, 1.2, 0.03em);
   }
 }
 
 .contacts {
-  display: flex;
+  
   align-items: center;
   margin-left: auto;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+   @media screen and (max-width: 767px) {
+      display: none;
+    }
+   
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+    
+
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -71,8 +80,11 @@ nav {
   color: var(--secondary-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  /* position: relative; */
   transition: color $transition;
+
+  &.current {
+    position: relative;
+  }
 
   &:hover,
   &:focus {
@@ -80,9 +92,10 @@ nav {
   }
 }
 .header {
-  /* position: absolute; */
+  
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media screen and (max-width: 767px) {
     height: 60px;
@@ -92,6 +105,10 @@ nav {
 
 .nav > li:first-child {
   margin-left: 93px;
+
+   @media screen and (max-width: 1999px) {
+     margin-left: 0;
+   }
 }
 .nav > li:not(:first-child) {
   margin-left: 50px;
@@ -113,9 +130,15 @@ nav {
   }
 }
 
-.contacts > li:last-child {
+/* .contacts > li:last-child {
   margin-left: 50px;
+} */
+
+ul.contacts {
+  margin-left: 0;
+   
 }
+
 .contact {
   @include FontType(14px, 500, 1.14, 0.02em);
   color: var(--primary-text-color);
@@ -124,6 +147,12 @@ nav {
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color $transition;
+  margin-bottom: 10px;
+
+    @media screen and (max-width: 1999px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -164,6 +193,9 @@ nav {
     display: none;
   }
 }
+body {
+  position: absolute;
+}
 .menu-container {
   display: none;
   
@@ -172,13 +204,18 @@ nav {
     display: block;
     padding-top: 48px;
     padding-left: 40px;
-    padding-bottom: 48px;
+    
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
-    max-height: 796px;
-    height: 100vw;
+
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    /* max-height: 796px;
+    height: 100vw; */
     background-color: var(--third-background-color);
   }
 }
@@ -190,7 +227,6 @@ nav {
 .menu-button.is-open .icon-cross {
   display: block;
   position: absolute;
-  /* top: 50px; */
   z-index: 2;
 }
 
@@ -211,8 +247,17 @@ nav {
   }
 }
 .mobile-contact {
+  margin-top: 40vh;
   margin-bottom: 32px;
   display: block;
+  @include FontType(34px, 500, 1.18, 0.02em);
+  color: var(--accent-color);
+}
+.mobile-mail-contact {
+  
+  display: block;
+  @include FontType(24px, 500, 1.16, 0.02em);
+  color: var(--primary-text-color);
 }
 .menu-social {
   display: inline-flex;
@@ -223,6 +268,7 @@ nav {
     @include FontType(18px, 500, 1.22, 0.02em);
     color: inherit;
     color: var(--accent-color);
+    margin-top: 64px;
     /* flex-basis: calc(100% / 4 - 10px); */
 
     &:not(:last-child)::after {

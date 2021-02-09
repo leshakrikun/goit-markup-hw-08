@@ -2,6 +2,10 @@ body {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: $basic-font;
+
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 .our-advantages{
   @media screen and (max-width: 767px) {
@@ -11,18 +15,17 @@ body {
 .list-advantages {
   @media screen and (max-width: 767px) {
       & h3.head-advantages {
-        /* display: block; */
         text-align: center;
-        /* margin-top: 30px; */
       } 
     }
 
   @media screen and (min-width: 768px) {
-    width: 768px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: calc(100%/2 - 30px);
   }
   @media screen and (min-width: 1200px) {
-    /* width: 1200px; */
     display: flex;
     justify-content: space-between;
     }
@@ -30,10 +33,11 @@ body {
 .desc-advantages {
   padding-bottom: 0;
   justify-content: center;
-
   align-items: center;
-  align-content: center
- 
+  align-content: center;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    } 
 }
 .advantages {
   @include FontType(14px, 400, 1.7, 0.03em);
@@ -44,12 +48,11 @@ body {
   }
   @media screen and (min-width: 768px) {
     flex-basis: calc(100%/2);
+    margin-bottom: 55px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
-    /* width: 1200px; */
     width: calc(100%/4);
-   /*  width: 270px; */
     margin: 0;
   }
 }
@@ -58,11 +61,10 @@ body {
   color: var(--secondary-text-color);
   text-transform: uppercase;
   margin-bottom: 10px;
-  /* padding-bottom: 94px; */ 
   justify-content: center;
   align-content: center;
   align-items: center;
-        /* margin-top: 30px; */
+        
 }
 
   .our-work {
@@ -293,6 +295,10 @@ main {
 .main {
   padding-top: 94px;
   padding-bottom: 94px;
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+      padding-bottom: 40px;
+    }    
 }
 .total {
   display: flex;
@@ -304,6 +310,10 @@ main {
   text-align: center;
   padding-bottom: 50px;
   margin: auto;
+  flex-wrap: wrap;
+    @media screen and (max-width: 767px) {
+      padding-bottom: 40px;
+    }  
 }
 .list-filter {
   display: inline-block;
@@ -321,6 +331,10 @@ main {
   transition: color $transition,
     background-color $transition,
     box-shadow $transition;
+
+    @media screen and (max-width: 767px) {
+      margin-right: 0;
+    }
 
   &:hover,
   &:focus {
