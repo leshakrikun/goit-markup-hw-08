@@ -2,63 +2,55 @@ body {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: $basic-font;
-
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 .our-advantages{
   @media screen and (max-width: 767px) {
       margin-top: 60px;
-  } 
+    } 
+    @media screen and (min-width: 1199px) {
+      padding-bottom: 94px;
+    }
 }
 .list-advantages {
   @media screen and (max-width: 767px) {
       & h3.head-advantages {
         text-align: center;
-      } 
     }
-
-  @media screen and (min-width: 768px) {
+}
+  @media screen and (min-width: $TabletWidth) {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
-    
   }
-  @media screen and (min-width: 1200px) {
-    
-    }
+  @media screen and (min-width: $DesktopWidth) {
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .desc-advantages {
   padding-bottom: 0;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $TabletWidth) {
         margin-left: 30px;
         margin-top: 30px;
         flex-basis: calc(100%/2-30px);
         max-width: 354px;
     } 
+      @media screen and (min-width: $DesktopWidth) {
+        margin-left: 0;
+        margin-top: 0;
+        max-width: 270px;
+    } 
 }
 .advantages {
-  @include FontType(14px, 400, 1.7, 0.03em);
-  
-  @media screen and (min-width: 480px) {
+  @include FontType(14px, 400, 1.7, 0.03em); 
+  @media screen and (min-width: $MobileWidth) {
     width: calc(100%/1);
     margin-top: 10px;
   }
-  @media screen and (min-width: 768px) {
-    /* flex-basis: calc(100%/2); */
-    margin-bottom: 55px;
-  
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    width: calc(100%/4);
-    margin: 0;
+  @media screen and (min-width: $TabletWidth) {
+    margin-bottom: 0;
   }
 }
 .head-advantages {
@@ -68,34 +60,28 @@ body {
   margin-bottom: 10px;
   justify-content: center;
   align-content: center;
-  align-items: center;
-        
+  align-items: center;       
 }
-
   .our-work {
-  @media screen and (max-width: 1999px) {
+    padding-bottom: 94px;
+  @media screen and (max-width: 1199px) {
     display: none;
     }
   }
-
   .section-title {
-
   @include FontType(36px, 700, 1.17, 0.03em);
   color: var(--secondary-text-color);
   text-align: center;
   margin-bottom: 50px;
 }
 .our-team {
+
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--team-color);
-
-    @media screen and (max-width: 1999px) {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }
-   
-
+   @media screen and (min-width: $TabletWidth) {
+    margin-top: 60px;
+  }
 }
 .section-team {
   @include FontType(36px, 700, 1.7, 0.03em);
@@ -105,16 +91,25 @@ body {
 }
 .work {
   display: block;
-    @media screen and (max-width: 1200px) {
+    @media screen and (min-width: $TabletWidth) {
       width: 270px;
+    }
+    @media screen and (min-width: $DesktopWidth) {
+      width: 370px;
     }
     @media screen and (max-width: 767px) {
       width: 100%;
       max-width: 450px;
     }
 }
+.our-team .work {
+  @media screen and (min-width: $DesktopWidth) {
+  width: 270px;
+}
+}
 .list-work-item {
   position: relative;
+  justify-content: center;
 }
 .work-type {
   @include FontType(14px, 700, 70px, 0.03em);
@@ -132,14 +127,14 @@ body {
   background-color: rgba(47, 48, 58, 0.8);
 }
 .list-work {
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: $MobileWidth) {
+    width: $MobileWidth;
   }
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: $TabletWidth) {
+    width: $TabletWidth;
   }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $DesktopWidth) {
+    width: $DesktopWidth;
     display: flex;
     justify-content: center;
   }
@@ -151,20 +146,13 @@ body {
   margin-right: 0;
 }
 .all-team {
-  @media screen and (min-width: 768px){
-  
+  @media screen and (min-width: $TabletWidth){
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
     justify-content: space-evenly;
-  
   }
-}
-.all-team > li {
-  @media screen and (min-width: 768px){
-  
-}
 }
 .team-memeber {
   background-color: var(--third-background-color);
@@ -173,10 +161,7 @@ body {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-/* .all-team > li:last-child {
-  margin-right: 0;
-} */
-      @media screen and (min-width: 768px){
+      @media screen and (min-width: $TabletWidth){
         margin-left: 30px;
         margin-top: 30px;
         flex-basis: calc(100%/2-30px);
@@ -196,12 +181,9 @@ body {
   margin-bottom: 16px;
   color: var(--primary-text-color);
 }
-
 .antenna::before {
   background-image: url(../img/optymizes_svg/antenna.svg);
   @extend %icon-advantages;
-  
- 
 }
 .clock::before {
   background-image: url(../img/optymizes_svg/clock.svg);
@@ -223,14 +205,13 @@ body {
     margin-right: auto;
   }
 }
-
 main {
   background-color: var(--third-background-color);
 }
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
-    @media screen and (max-width: 1999px) {
+    @media screen and (max-width: 1199px) {
       padding-top: 60px;
       padding-bottom: 60px;
     }  
@@ -275,11 +256,10 @@ main {
   height: 45.5px;
 }
 .square {
-  /* display: flex;
-  flex-wrap: wrap; */
-  /* flex-basis: calc(100%/2 - 30px); */
+   display: flex;
+   justify-content: space-between;
 
-    @media screen and (max-width: 1999px){
+    @media screen and (max-width: 1199px){
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
@@ -304,14 +284,12 @@ main {
         width: 210px;
         margin-bottom: 30px;
       }  
-
-      @media screen and (max-width: 1999px){
+      @media screen and (max-width: 1199px){
         margin-left: 30px;
         margin-top: 30px;
         flex-basis: calc(100%/3-30px);
         width: 226px;
-      }  
-
+      }
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -364,7 +342,6 @@ main {
     @media screen and (max-width: 767px) {
       margin-right: 0;
     }
-
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -382,14 +359,9 @@ button {
   color: var(--secondary-text-color);
   margin-bottom: 4px;
 }
-.projects-item:nth-child(2) {
-  /* display: flex;
-  flex-wrap: wrap; */
-  padding-right: 40px;
-  padding: 0;
-
+ .all-portfolio .one-work:nth-child(2) .projects-item {
+ padding-right: 10px;
 }
-
 .all-portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -417,8 +389,7 @@ button {
 .img-advertisment {
   display: block;
     
-
-  @media screen and (max-width: 1999px) {
+  @media screen and (max-width: 1199px) {
   width: 354px;
   height: 294px;
   }
@@ -455,7 +426,7 @@ button {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 
-  @media screen and (max-width: 1999px) {
+  @media screen and (max-width: 1199px) {
     height: 146px;
   }
   @media screen and (max-width: 767px) {
@@ -474,8 +445,7 @@ button {
   justify-content: center;
   align-items: center;
 
-
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $TabletWidth) {
   margin-left: 32px;
   margin-right: 25px;
   }

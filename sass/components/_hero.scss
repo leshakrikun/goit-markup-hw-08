@@ -2,7 +2,6 @@
     padding-top: 118px;
     padding-bottom: 118px;
     max-width: 1600px;
-    
     margin-left: auto;
     margin-right: auto;
     background-image: linear-gradient(
@@ -15,17 +14,17 @@
     background-size: cover;
     margin-bottom: 30px;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $TabletWidth) {
         background-image: linear-gradient(
         to right,
         rgba(47,48,58,0.4),
         rgba(47,48,58,0.4)),
         url('../img/task_9/optimize/header_tab.jpg');
         background-position: center;
-       
     }
-
-     @media screen and (min-width: 1200px) {
+     @media screen and (min-width: $DesktopWidth) {
+    padding-bottom: 200px;
+    padding-top: 200px;     
     background-image: linear-gradient(
     to right,
     rgba(47,48,58,0.4),
@@ -40,15 +39,11 @@
     text-align: center;
     padding-bottom: 30px;
     color: var(--third-background-color);  
-
-        @media screen and (min-width: 1200px) {
+        @media screen and (min-width: $DesktopWidth) {
             @include FontType(44px, 900, 1.36, 0.06em);
             padding-bottom: 30px;
         }
 }
-
-
-
 .button {
     display: block;
     background-color: var(--accent-color);

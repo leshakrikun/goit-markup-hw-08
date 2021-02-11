@@ -1,20 +1,17 @@
 header {
-  align-items: center;
   border-bottom: 1px solid #ececec;
   background-color: var(--third-background-color);
-  display: flex;
   justify-content: space-between;
-  max-width: 1200px;
 }
 nav {
   display: flex;
 }
 .nav {
   display: flex;
-  
   align-items: center;
     @media screen and (max-width: 767px) {
       display: none;
+      margin-left: auto;
     }
 }
 .container {
@@ -22,20 +19,16 @@ nav {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (min-width: $MobileWidth) {
+    width: $MobileWidth;
   }
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (min-width: $TabletWidth) {
+    width: $TabletWidth;
   }
-  @media screen and (min-width: 1200px) {
-    width: 1200px;
+  @media screen and (min-width: $DesktopWidth) {
+    width: $DesktopWidth;
   }
- 
 }
-
 .logo {
   display: block;
   color: var(--accent-color);
@@ -47,28 +40,24 @@ nav {
   color: var(--icon-color);
   align-items: center;
 
-  @media screen and (min-width: 1200px) {
-    
+  @media screen and (min-width: $DesktopWidth) {
     @include FontType(26px, 700, 1.2, 0.03em);
   }
 }
-
 .contacts {
-  
   align-items: center;
-  margin-left: auto;
+  margin-left: 0;
    @media screen and (max-width: 767px) {
       display: none;
     }
-   
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $TabletWidth) {
       display: block;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $DesktopWidth) {
       display: flex;
+      margin-left: auto;
     }
     
-
   &:hover,
   &:focus {
     color: var(--accent-color);
@@ -91,8 +80,7 @@ nav {
     color: var(--accent-color);
   }
 }
-.header {
-  
+.header { 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -101,19 +89,20 @@ nav {
     height: 60px;
     width: 100%;
   }
+  @media screen and (min-width: $DesktopWidth) {
+    justify-content: end;
+  }
 }
-
 .nav > li:first-child {
   margin-left: 93px;
 
-   @media screen and (max-width: 1999px) {
+   @media screen and (max-width: 1199px) {
      margin-left: 0;
    }
 }
 .nav > li:not(:first-child) {
   margin-left: 50px;
 }
-
 .current {
   display: block;
   color: var(--accent-color);
@@ -129,16 +118,11 @@ nav {
     border-radius: 2px;
   }
 }
-
-/* .contacts > li:last-child {
-  margin-left: 50px;
-} */
-
-ul.contacts {
-  margin-left: 0;
-   
+.contacts > li:last-child {
+ @media screen and (min-width: $DesktopWidth) {
+     margin-left: 93px;
+ }
 }
-
 .contact {
   @include FontType(14px, 500, 1.14, 0.02em);
   color: var(--primary-text-color);
@@ -147,11 +131,14 @@ ul.contacts {
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color $transition;
-  margin-bottom: 10px;
-
-    @media screen and (max-width: 1999px) {
+    @media screen and (max-width: 1199px) {
       padding-top: 0;
       padding-bottom: 0;
+      margin-bottom: 10px;
+
+    :last-child {
+      margin-bottom: 0;
+    }  
     }
   &:hover,
   &:focus {
@@ -170,7 +157,6 @@ ul.contacts {
   margin-right: 10px;
   fill: currentColor;
 }
-
 .menu-button {
   display: block;
   padding: 0;
@@ -178,58 +164,44 @@ ul.contacts {
   top: 10px;
   right: 25px;
   margin-right: auto;
-
   border: none;
   background-color: transparent;
   align-items: center;
-
   fill: currentColor;
   z-index: 2;
   &:hover,
   &:focus {
     background-color: var(--accent-color);
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $TabletWidth) {
     display: none;
   }
 }
-body {
-  position: absolute;
-}
 .menu-container {
   display: none;
-  
 
   &.is-open {
     display: block;
     padding-top: 48px;
-    padding-left: 40px;
-    
+    padding-left: 40px; 
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
-
     right: 0;
     bottom: 0;
     z-index: 1;
-
-    /* max-height: 796px;
-    height: 100vw; */
     background-color: var(--third-background-color);
   }
 }
-
 .menu-button .icon-cross {
   display: none;
 }
-
 .menu-button.is-open .icon-cross {
   display: block;
   position: absolute;
   z-index: 2;
 }
-
 .menu-button.is-open .icon-menu {
   display: none;
 }
@@ -254,7 +226,6 @@ body {
   color: var(--accent-color);
 }
 .mobile-mail-contact {
-  
   display: block;
   @include FontType(24px, 500, 1.16, 0.02em);
   color: var(--primary-text-color);
@@ -269,7 +240,6 @@ body {
     color: inherit;
     color: var(--accent-color);
     margin-top: 64px;
-    /* flex-basis: calc(100% / 4 - 10px); */
 
     &:not(:last-child)::after {
       content: '';
