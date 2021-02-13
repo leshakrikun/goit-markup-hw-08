@@ -279,20 +279,20 @@ main {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   background-color: var(--third-background-color);
   color: var(--link-color);
   transition: color $transition, border $transition;
-
-  @media screen and (max-width: 1199px) {
-    margin-left: 30px;
-    margin-top: 30px;
-    flex-basis: calc(100% / 3-30px);
+  margin-left: 30px;
+  margin-top: 30px;
+    @media screen and (min-width: $TabletWidth) {
+    width: 226px;
   }
-  @media screen and (max-width: 767px) {
-    flex-basis: calc(100% / 2-30px);
-  }
+    @media screen and (min-width: $DesktopWidth) {
+      width: 170px;
+    }
+  
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -318,18 +318,21 @@ main {
 .filter {
   display: flex;
   text-align: center;
-  padding-bottom: 50px;
   margin: auto;
-  margin-left: -30px;
-  margin-top: -30px;
+/*   margin-left: -30px;
+  margin-top: -30px; */
   flex-wrap: wrap;
   padding-bottom: 30px;
   @media screen and (min-width: $TabletWidth) {
     margin: auto;
   }
+    @media screen and (min-width: $DesktopWidth) {
+      padding-bottom: 50px;
+    }  
 }
 .list-filter {
   display: inline-block;
+  margin-right: 8px;
 }
 .button-filter {
   @include FontType(16px, 500, 1.6, 0.03em);
