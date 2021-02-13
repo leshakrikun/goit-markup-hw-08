@@ -27,15 +27,19 @@ $DesktopWidth: 1200px;
   display: block;
   content: '';
   contain: content;
-  width: 70px;
-  height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 55px;
-  margin-bottom: 55px;
+  max-width: 450px;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: var(--team-color);
   background-position: 50% 50%;
   background-repeat: no-repeat;
+    @media screen and (min-width: $TabletWidth) {
+      width: 354px;
+    }    
+    @media screen and (min-width: $DesktopWidth) {
+      width: 270px;
+    }  
 }
 @mixin FontType($font-size, $font-weight, $line-height, $letter-spacing){
   font-size: $font-size;

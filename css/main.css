@@ -378,15 +378,25 @@ p {
   display: block;
   content: '';
   contain: content;
-  width: 70px;
-  height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 55px;
-  margin-bottom: 55px;
+  max-width: 450px;
+  height: 120px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   background-color: var(--team-color);
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .antenna::before, .clock::before, .astronaut::before, .diagram::before {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .antenna::before, .clock::before, .astronaut::before, .diagram::before {
+    width: 270px;
+  }
 }
 
 header {
@@ -777,7 +787,6 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1421,10 +1430,12 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-@media screen and (max-width: 767px) {
-  .our-advantages {
-    margin-top: 60px;
-  }
+.our-advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /*  @media screen and (max-width: 767px) {
+      /* margin-top: 60px; 
+    }  */
 }
 
 @media screen and (min-width: 1199px) {
@@ -1547,20 +1558,30 @@ body {
   background-color: var(--team-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .our-team {
-    margin-top: 60px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
 .section-team {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   text-align: center;
   padding-bottom: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-team {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+  }
 }
 
 .work {
@@ -1908,18 +1929,23 @@ main {
   text-align: center;
   padding-bottom: 50px;
   margin: auto;
+  margin-left: -30px;
+  margin-top: -30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .filter {
-    padding-bottom: 40px;
+    margin: auto;
   }
 }
 
 .list-filter {
   display: inline-block;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .button-filter {
@@ -1930,7 +1956,6 @@ main {
   font-family: inherit;
   color: var(--secondary-text-color);
   cursor: pointer;
-  margin-right: 8px;
   padding: 6px 22px;
   text-align: center;
   background-color: var(--team-color);
@@ -1973,6 +1998,11 @@ button {
   padding-right: 10px;
 }
 
+.all-portfolio {
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
 @media screen and (min-width: 768px) {
   .all-portfolio {
     display: -webkit-box;
@@ -1980,8 +2010,6 @@ button {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
   }
 }
 
@@ -1993,10 +2021,6 @@ button {
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  margin-left: 30px;
-  margin-top: 30px;
-  -ms-flex-preferred-size: calc(100%/2-30px);
-      flex-basis: calc(100%/2-30px);
 }
 
 .one-work-link:focus,
@@ -2009,26 +2033,19 @@ button {
 
 .img-advertisment {
   display: block;
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .img-advertisment {
     width: 354px;
-    height: 294px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .img-advertisment {
-    width: 450px;
-    height: 294px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .img-advertisment {
-    width: 100%;
-    height: 100%;
+    width: 370px;
   }
 }
 

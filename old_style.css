@@ -321,6 +321,7 @@
         background-color: var(--team-color); 
         background-position: 50% 50%;
         background-repeat: no-repeat;
+            
     }
     .clock::before{
         background-image: url( ../img/optymizes_svg/clock.svg);

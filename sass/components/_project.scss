@@ -4,9 +4,11 @@ body {
   font-family: $basic-font;
 }
 .our-advantages{
-  @media screen and (max-width: 767px) {
-      margin-top: 60px;
-    } 
+    padding-top: 60px;
+    padding-bottom: 60px;
+ /*  @media screen and (max-width: 767px) {
+      /* margin-top: 60px; 
+    }  */
     @media screen and (min-width: 1199px) {
       padding-bottom: 94px;
     }
@@ -79,15 +81,19 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--team-color);
-   @media screen and (min-width: $TabletWidth) {
-    margin-top: 60px;
+    @media screen and (min-width: $DesktopWidth) {
+      padding-top: 94px;
+      padding-bottom: 94px;
   }
 }
 .section-team {
-  @include FontType(36px, 700, 1.7, 0.03em);
+  @include FontType(28px, 700, 1.17, 0.03em);
   color: var(--secondary-text-color);
   text-align: center;
   padding-bottom: 50px;
+    @media screen and (min-width: $DesktopWidth) {
+      @include FontType(36px, 700, 1.7, 0.03em);
+  }
 }
 .work {
   display: block;
@@ -317,26 +323,31 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
+  
 }
 .filter {
   display: flex;
   text-align: center;
   padding-bottom: 50px;
   margin: auto;
+  margin-left: -30px;
+  margin-top: -30px;
   flex-wrap: wrap;
-    @media screen and (max-width: 767px) {
-      padding-bottom: 40px;
+  padding-bottom: 30px;
+    @media screen and (min-width: $TabletWidth) {
+      margin: auto;
     }  
 }
 .list-filter {
   display: inline-block;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 .button-filter {
   @include FontType(16px, 500, 1.6, 0.03em);
   font-family: inherit;
   color: var(--secondary-text-color);
   cursor: pointer;
-  margin-right: 8px;
   padding: 6px 22px;
   text-align: center;
   background-color: var(--team-color);
@@ -369,23 +380,19 @@ button {
  padding-right: 10px;
 }
 .all-portfolio {
-  @media screen and (min-width: $TabletWidth) {
-  display: flex;
-  flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
-  }
+   @media screen and (min-width: $TabletWidth) { 
+  display: flex;
+  flex-wrap: wrap;
+   }
+  
 }
 .one-work {
   background: var(--third-background-color);
   margin-left: 30px;
   margin-top: 30px;
-  transition: box-shadow $transition;
-
-        margin-left: 30px;
-        margin-top: 30px;
-        flex-basis: calc(100%/2-30px);
-  
+  transition: box-shadow $transition; 
 }
 .one-work-link:focus,
 .one-work-link:hover {
@@ -396,19 +403,15 @@ button {
 }
 .img-advertisment {
   display: block;
-    
-  @media screen and (max-width: 1199px) {
-  width: 354px;
-  height: 294px;
-  }
-  @media screen and (max-width: 767px) {
-  width: 450px;
-  height: 294px;
-  }
-   @media screen and (max-width: 767px) {
   width: 100%;
   height: 100%;
-  }
+    @media screen and (min-width: $TabletWidth) {
+      width: 354px;
+      
+    }
+     @media screen and (min-width: $DesktopWidth) {
+        width: 370px;
+      }
 }
 .projects-text {
   @include FontType(18px, 400, 1.55, 0.03em);
