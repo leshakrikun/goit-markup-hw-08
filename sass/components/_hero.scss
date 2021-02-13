@@ -8,30 +8,57 @@
     to right,
     rgba(47,48,58,0.4),
     rgba(47,48,58,0.4)),
-    url('../img/task_9/optimize/header.jpg');
+    url('../img/task_9/optimize/phone/hero@1x.jpg');
     background-position: center;
     background-repeat:no-repeat;
     background-size: cover;
     margin-bottom: 30px;
 
-    @media screen and (min-width: $TabletWidth) {
+        @media screen and (min-width: $TabletWidth) {
         background-image: linear-gradient(
         to right,
         rgba(47,48,58,0.4),
         rgba(47,48,58,0.4)),
-        url('../img/task_9/optimize/header_tab.jpg');
-        background-position: center;
+        url('../img/task_9/optimize/tablet/hero@1x.jpg');
+}
+        @media screen and (min-width: $DesktopWidth) {
+            padding-bottom: 200px;
+            padding-top: 200px;     
+            background-image: linear-gradient(
+            to right,
+            rgba(47,48,58,0.4),
+            rgba(47,48,58,0.4)),
+            url('../img/task_9/optimize/desktop/hero@1x.jpg');
+        }
+}
+        @media screen and (min-device-pixel-ratio: 2),
+            screen and (-webkit-min-device-pixel-ratio: 2),
+            screen and (-o-min-device-pixel-ratio: 2/1),
+            screen and (min-resolution: 192dpi),
+            screen and (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(
+            to right,
+            rgba(47,48,58,0.4),
+            rgba(47,48,58,0.4)),url('../img/task_9/optimize/phone/hero@2x.jpg');
+
+            @media screen and (min-width: $TabletWidth) {
+                background-image: linear-gradient(
+                to right,
+                rgba(47,48,58,0.4),
+                rgba(47,48,58,0.4)),
+                url('../img/task_9/optimize/tablet/hero@2x.jpg');
+            }
+            @media screen and (min-width: $DesktopWidth) {
+            padding-bottom: 200px;
+            padding-top: 200px;     
+            background-image: linear-gradient(
+            to right,
+            rgba(47,48,58,0.4),
+            rgba(47,48,58,0.4)),
+            url('../img/task_9/optimize/desktop/hero@2x.jpg');
+        }
     }
-     @media screen and (min-width: $DesktopWidth) {
-    padding-bottom: 200px;
-    padding-top: 200px;     
-    background-image: linear-gradient(
-    to right,
-    rgba(47,48,58,0.4),
-    rgba(47,48,58,0.4)),
-    url('../img/Optymized/hero.jpg');
-    background-position: center;
-  }
 }
 .title-hero {
     @include FontType(26px, 900, 1.6, 0.06em);

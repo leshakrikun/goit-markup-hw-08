@@ -106,16 +106,18 @@ nav {
 .current {
   display: block;
   color: var(--accent-color);
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: var(--accent-color);
-    border-radius: 2px;
+      &::after {
+        @media screen and (min-width: $TabletWidth) {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
   }
 }
 .contacts > li:last-child {

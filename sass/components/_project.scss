@@ -92,7 +92,7 @@ body {
 .work {
   display: block;
     @media screen and (min-width: $TabletWidth) {
-      width: 270px;
+      width: 354px;
     }
     @media screen and (min-width: $DesktopWidth) {
       width: 370px;
@@ -164,9 +164,14 @@ body {
       @media screen and (min-width: $TabletWidth){
         margin-left: 30px;
         margin-top: 30px;
-        flex-basis: calc(100%/2-30px);
-        max-width: 354px;
+      
       }  
+      @media screen and (max-width: 767px){
+        
+       &:not(:last-child) {
+        margin-bottom: 30px;
+}
+}
 }
 .employee-name {
   @include FontType(16px, 500, 1.2, 0.03em);
@@ -198,12 +203,10 @@ body {
   @extend %icon-advantages;
 }
 .social-block {
-  @media screen and (max-width: 767px) {
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-  }
 }
 main {
   background-color: var(--third-background-color);
@@ -222,7 +225,7 @@ main {
   text-align: center;
   padding-bottom: 50px;
 
-  @media screen and (max-width: 1999px) {
+  @media screen and (max-width: 1199px) {
     @include FontType(28px, 700, 1.14, 0.03em);
     padding-bottom: 30px;
   }
@@ -280,16 +283,19 @@ main {
   transition: color $transition,
     border $transition;
 
-      @media screen and (max-width: 767px) {
-        width: 210px;
-        margin-bottom: 30px;
-      }  
+    
       @media screen and (max-width: 1199px){
+        
         margin-left: 30px;
         margin-top: 30px;
         flex-basis: calc(100%/3-30px);
-        width: 226px;
+        
       }
+        @media screen and (max-width: 767px) {
+       
+        flex-basis: calc(100%/2-30px);
+        
+      }  
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -363,10 +369,12 @@ button {
  padding-right: 10px;
 }
 .all-portfolio {
+  @media screen and (min-width: $TabletWidth) {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
+  }
 }
 .one-work {
   background: var(--third-background-color);
@@ -397,6 +405,10 @@ button {
   width: 450px;
   height: 294px;
   }
+   @media screen and (max-width: 767px) {
+  width: 100%;
+  height: 100%;
+  }
 }
 .projects-text {
   @include FontType(18px, 400, 1.55, 0.03em);
@@ -413,7 +425,11 @@ button {
   left: 0;
   transform: translateY(420px);
   transition: transform $transition;
+    @media screen and (max-width: 1199px) {
+      padding: 63px 10px;
+    }
 }
+
 .thumb {
   position: relative;
   overflow: hidden;
