@@ -1480,8 +1480,8 @@ body {
   .desc-advantages {
     margin-left: 30px;
     margin-top: 30px;
-    -ms-flex-preferred-size: calc(100%/2-30px);
-        flex-basis: calc(100%/2-30px);
+    -ms-flex-preferred-size: calc(100% / 2-30px);
+        flex-basis: calc(100% / 2-30px);
     max-width: 354px;
   }
 }
@@ -1503,7 +1503,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .advantages {
-    width: calc(100%/1);
+    width: calc(100% / 1);
     margin-top: 10px;
   }
 }
@@ -1878,15 +1878,15 @@ main {
   .icon-square {
     margin-left: 30px;
     margin-top: 30px;
-    -ms-flex-preferred-size: calc(100%/3-30px);
-        flex-basis: calc(100%/3-30px);
+    -ms-flex-preferred-size: calc(100% / 3-30px);
+        flex-basis: calc(100% / 3-30px);
   }
 }
 
 @media screen and (max-width: 767px) {
   .icon-square {
-    -ms-flex-preferred-size: calc(100%/2-30px);
-        flex-basis: calc(100%/2-30px);
+    -ms-flex-preferred-size: calc(100% / 2-30px);
+        flex-basis: calc(100% / 2-30px);
   }
 }
 
@@ -1900,14 +1900,14 @@ main {
 }
 
 .main {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .main {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -1944,8 +1944,6 @@ main {
 
 .list-filter {
   display: inline-block;
-  margin-left: 30px;
-  margin-top: 30px;
 }
 
 .button-filter {

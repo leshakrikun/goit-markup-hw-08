@@ -3,22 +3,22 @@ body {
   color: var(--primary-text-color);
   font-family: $basic-font;
 }
-.our-advantages{
-    padding-top: 60px;
-    padding-bottom: 60px;
- /*  @media screen and (max-width: 767px) {
+.our-advantages {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /*  @media screen and (max-width: 767px) {
       /* margin-top: 60px; 
     }  */
-    @media screen and (min-width: 1199px) {
-      padding-bottom: 94px;
-    }
+  @media screen and (min-width: 1199px) {
+    padding-bottom: 94px;
+  }
 }
 .list-advantages {
   @media screen and (max-width: 767px) {
-      & h3.head-advantages {
-        text-align: center;
+    & h3.head-advantages {
+      text-align: center;
     }
-}
+  }
   @media screen and (min-width: $TabletWidth) {
     display: flex;
     flex-wrap: wrap;
@@ -33,22 +33,22 @@ body {
 }
 .desc-advantages {
   padding-bottom: 0;
-    @media screen and (min-width: $TabletWidth) {
-        margin-left: 30px;
-        margin-top: 30px;
-        flex-basis: calc(100%/2-30px);
-        max-width: 354px;
-    } 
-      @media screen and (min-width: $DesktopWidth) {
-        margin-left: 0;
-        margin-top: 0;
-        max-width: 270px;
-    } 
+  @media screen and (min-width: $TabletWidth) {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 2-30px);
+    max-width: 354px;
+  }
+  @media screen and (min-width: $DesktopWidth) {
+    margin-left: 0;
+    margin-top: 0;
+    max-width: 270px;
+  }
 }
 .advantages {
-  @include FontType(14px, 400, 1.7, 0.03em); 
+  @include FontType(14px, 400, 1.7, 0.03em);
   @media screen and (min-width: $MobileWidth) {
-    width: calc(100%/1);
+    width: calc(100% / 1);
     margin-top: 10px;
   }
   @media screen and (min-width: $TabletWidth) {
@@ -62,28 +62,27 @@ body {
   margin-bottom: 10px;
   justify-content: center;
   align-content: center;
-  align-items: center;       
+  align-items: center;
 }
-  .our-work {
-    padding-bottom: 94px;
+.our-work {
+  padding-bottom: 94px;
   @media screen and (max-width: 1199px) {
     display: none;
-    }
   }
-  .section-title {
+}
+.section-title {
   @include FontType(36px, 700, 1.17, 0.03em);
   color: var(--secondary-text-color);
   text-align: center;
   margin-bottom: 50px;
 }
 .our-team {
-
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--team-color);
-    @media screen and (min-width: $DesktopWidth) {
-      padding-top: 94px;
-      padding-bottom: 94px;
+  @media screen and (min-width: $DesktopWidth) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 .section-team {
@@ -91,27 +90,27 @@ body {
   color: var(--secondary-text-color);
   text-align: center;
   padding-bottom: 50px;
-    @media screen and (min-width: $DesktopWidth) {
-      @include FontType(36px, 700, 1.7, 0.03em);
+  @media screen and (min-width: $DesktopWidth) {
+    @include FontType(36px, 700, 1.7, 0.03em);
   }
 }
 .work {
   display: block;
-    @media screen and (min-width: $TabletWidth) {
-      width: 354px;
-    }
-    @media screen and (min-width: $DesktopWidth) {
-      width: 370px;
-    }
-    @media screen and (max-width: 767px) {
-      width: 100%;
-      max-width: 450px;
-    }
+  @media screen and (min-width: $TabletWidth) {
+    width: 354px;
+  }
+  @media screen and (min-width: $DesktopWidth) {
+    width: 370px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    max-width: 450px;
+  }
 }
 .our-team .work {
   @media screen and (min-width: $DesktopWidth) {
-  width: 270px;
-}
+    width: 270px;
+  }
 }
 .list-work-item {
   position: relative;
@@ -152,7 +151,7 @@ body {
   margin-right: 0;
 }
 .all-team {
-  @media screen and (min-width: $TabletWidth){
+  @media screen and (min-width: $TabletWidth) {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
@@ -167,17 +166,15 @@ body {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 
-      @media screen and (min-width: $TabletWidth){
-        margin-left: 30px;
-        margin-top: 30px;
-      
-      }  
-      @media screen and (max-width: 767px){
-        
-       &:not(:last-child) {
-        margin-bottom: 30px;
-}
-}
+  @media screen and (min-width: $TabletWidth) {
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 }
 .employee-name {
   @include FontType(16px, 500, 1.2, 0.03em);
@@ -209,10 +206,10 @@ body {
   @extend %icon-advantages;
 }
 .social-block {
-    display: flex;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 main {
   background-color: var(--third-background-color);
@@ -220,10 +217,10 @@ main {
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
-    @media screen and (max-width: 1199px) {
-      padding-top: 60px;
-      padding-bottom: 60px;
-    }  
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .our-clients {
   @include FontType(36px, 700, 1.17, 0.03em);
@@ -265,16 +262,16 @@ main {
   height: 45.5px;
 }
 .square {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    @media screen and (max-width: 1199px){
+  @media screen and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
     justify-content: space-evenly;
-    }
+  }
 }
 .icon-square {
   border: 1px solid var(--link-color);
@@ -286,22 +283,16 @@ main {
   height: 90px;
   background-color: var(--third-background-color);
   color: var(--link-color);
-  transition: color $transition,
-    border $transition;
+  transition: color $transition, border $transition;
 
-    
-      @media screen and (max-width: 1199px){
-        
-        margin-left: 30px;
-        margin-top: 30px;
-        flex-basis: calc(100%/3-30px);
-        
-      }
-        @media screen and (max-width: 767px) {
-       
-        flex-basis: calc(100%/2-30px);
-        
-      }  
+  @media screen and (max-width: 1199px) {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc(100% / 3-30px);
+  }
+  @media screen and (max-width: 767px) {
+    flex-basis: calc(100% / 2-30px);
+  }
   &:hover,
   &:focus {
     border: 1px solid var(--accent-color);
@@ -312,18 +303,17 @@ main {
   margin-right: 0;
 }
 .main {
-  padding-top: 94px;
-  padding-bottom: 94px;
-    @media screen and (max-width: 767px) {
-      padding-top: 60px;
-      padding-bottom: 40px;
-    }    
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $DesktopWidth) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .total {
   display: flex;
   flex-direction: column;
   text-align: center;
-  
 }
 .filter {
   display: flex;
@@ -334,14 +324,12 @@ main {
   margin-top: -30px;
   flex-wrap: wrap;
   padding-bottom: 30px;
-    @media screen and (min-width: $TabletWidth) {
-      margin: auto;
-    }  
+  @media screen and (min-width: $TabletWidth) {
+    margin: auto;
+  }
 }
 .list-filter {
   display: inline-block;
-  margin-left: 30px;
-  margin-top: 30px;
 }
 .button-filter {
   @include FontType(16px, 500, 1.6, 0.03em);
@@ -352,13 +340,12 @@ main {
   text-align: center;
   background-color: var(--team-color);
   border-radius: 4px;
-  transition: color $transition,
-    background-color $transition,
+  transition: color $transition, background-color $transition,
     box-shadow $transition;
 
-    @media screen and (max-width: 767px) {
-      margin-right: 0;
-    }
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+  }
   &:hover,
   &:focus {
     background-color: var(--accent-color);
@@ -376,23 +363,22 @@ button {
   color: var(--secondary-text-color);
   margin-bottom: 4px;
 }
- .all-portfolio .one-work:nth-child(2) .projects-item {
- padding-right: 10px;
+.all-portfolio .one-work:nth-child(2) .projects-item {
+  padding-right: 10px;
 }
 .all-portfolio {
   margin-left: -30px;
   margin-top: -30px;
-   @media screen and (min-width: $TabletWidth) { 
-  display: flex;
-  flex-wrap: wrap;
-   }
-  
+  @media screen and (min-width: $TabletWidth) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .one-work {
   background: var(--third-background-color);
   margin-left: 30px;
   margin-top: 30px;
-  transition: box-shadow $transition; 
+  transition: box-shadow $transition;
 }
 .one-work-link:focus,
 .one-work-link:hover {
@@ -405,13 +391,12 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-    @media screen and (min-width: $TabletWidth) {
-      width: 354px;
-      
-    }
-     @media screen and (min-width: $DesktopWidth) {
-        width: 370px;
-      }
+  @media screen and (min-width: $TabletWidth) {
+    width: 354px;
+  }
+  @media screen and (min-width: $DesktopWidth) {
+    width: 370px;
+  }
 }
 .projects-text {
   @include FontType(18px, 400, 1.55, 0.03em);
@@ -428,9 +413,9 @@ button {
   left: 0;
   transform: translateY(420px);
   transition: transform $transition;
-    @media screen and (max-width: 1199px) {
-      padding: 63px 10px;
-    }
+  @media screen and (max-width: 1199px) {
+    padding: 63px 10px;
+  }
 }
 
 .thumb {
@@ -465,7 +450,7 @@ button {
   align-items: center;
 
   @media screen and (min-width: $TabletWidth) {
-  margin-left: 32px;
-  margin-right: 25px;
+    margin-left: 32px;
+    margin-right: 25px;
   }
 }
