@@ -183,15 +183,19 @@ nav {
   display: none;
 
   &.is-open {
-    display: block;
-    padding-top: 48px;
-    padding-left: 40px; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    height: 100%;
+
+    padding: 48px 10px 60px 40px;
+  
     position: absolute;
     width: 100%;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     z-index: 1;
     background-color: var(--third-background-color);
   }
@@ -221,7 +225,6 @@ nav {
   }
 }
 .mobile-contact {
-  margin-top: 40vh;
   margin-bottom: 32px;
   display: block;
   @include FontType(34px, 500, 1.18, 0.02em);
@@ -233,15 +236,18 @@ nav {
   color: var(--primary-text-color);
 }
 .menu-social {
-  display: inline-flex;
+  display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
+
 
   &__link {
-    display: block;
+    
     @include FontType(18px, 500, 1.22, 0.02em);
+    
     color: inherit;
     color: var(--accent-color);
-    margin-top: 64px;
+    margin-top: 10px;
 
     &:not(:last-child)::after {
       content: '';
